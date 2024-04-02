@@ -21,6 +21,18 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'bio',
+        'nickname',
+        'avatar',
+        'occupation',
+        'profile_link',
+        'user_type',
+        'primary_color',
+        'secondary_color',
+        'tertiary_color',
+        'text_color',
+        'border_color',
+        'menu_color',
     ];
 
     /**
@@ -42,4 +54,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function links()
+    {
+        return $this->hasMany(Link::class);
+    }
+
+    public function bottomLinks()
+    {
+        return $this->hasMany(BottomLink::class);
+    }
 }

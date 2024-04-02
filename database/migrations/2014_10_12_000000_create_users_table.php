@@ -17,6 +17,18 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->longText('bio')->nullable();
+            $table->string('nickname')->nullable();
+            $table->longText('avatar')->nullable();
+            $table->string('occupation')->nullable();
+            $table->string('profile_link')->nullable();
+            $table->enum('user_type', ['admin', 'user'])->default('user');
+            $table->string('primary_color')->nullable();
+            $table->string('secondary_color')->nullable();
+            $table->string('tertiary_color')->nullable();
+            $table->string('text_color')->nullable();
+            $table->string('border_color')->nullable();
+            $table->string('menu_color')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
