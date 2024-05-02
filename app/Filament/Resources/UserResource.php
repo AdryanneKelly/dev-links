@@ -30,6 +30,11 @@ class UserResource extends Resource
 
     protected static ?string $modelLabel = 'Usuários';
 
+    // public static function shouldRegisterNavigation(): bool
+    // {
+    //     return auth()->user()?->user_type === 'admin';
+    // }
+
     public static function form(Form $form): Form
     {
         return $form
