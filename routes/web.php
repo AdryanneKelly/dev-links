@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Dev;
+use App\Livewire\NotFound;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/dev/{nick}', Dev::class)->name('dev');
+Route::get('/not-found', NotFound::class)->name('not-found');

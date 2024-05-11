@@ -12,6 +12,9 @@ class Dev extends Component
     public function mount($nick)
     {
         $this->dev = User::where('nickname', $nick)->first();
+        if (!$this->dev) {
+            return redirect()->route('not-found');
+        }
     }
 
 
